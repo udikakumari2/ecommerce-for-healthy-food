@@ -14,14 +14,14 @@ import p13_img from "./product_13.jpg";
 import p14_img from "./product_14.jpg";
 import p15_img from "./product_15.jpg";
 import p16_img from "./product_16.jpg";
-import p17_img from "./product_17.jpg";
+/* import p17_img from "./product_17.jpg";
 import p18_img from "./product_18.jpg";
 import p19_img from "./product_19.jpg";
 import p20_img from "./product_20.jpg";
 import p21_img from "./product_21.jpg";
 import p22_img from "./product_22.jpg";
 import p23_img from "./product_23.jpg";
-import p24_img from "./product_24.jpg";
+import p24_img from "./product_24.jpg"; */
 let all_product = [
     {
       id: 1,
