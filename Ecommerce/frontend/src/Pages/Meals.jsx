@@ -6,13 +6,15 @@ import ProductDisplay from '../Components/ProductDisplay/ProductDisplay'
 const Meals = () => {
   const {all_product}=useContext(ShopContext);
   const {mealId}=useParams();
-  const meal=all_product.find((e)=> e.id === Number(mealId))
+  const meal=all_product.find((e)=> e.id === Number(mealId));
+  
   return (
     
 
     <div>
+      <p>${meal.id}</p>
       <Breadcrum meal={meal}/>
-      <ProductDisplay meal={meal}/>
+      {/* <ProductDisplay meal={meal}/> */}
 
     </div>
   )
