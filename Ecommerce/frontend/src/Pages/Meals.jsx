@@ -1,5 +1,6 @@
-import React, { useContext } from 'react'
+ import React, { useContext } from 'react'
 import { ShopContext } from '../Context/ShopContext';
+
 import { useParams } from 'react-router-dom';
 import Breadcrum from '../Components/Breadcrum/Breadcrum';
 import ProductDisplay from '../Components/ProductDisplay/ProductDisplay'
@@ -12,9 +13,9 @@ const Meals = () => {
     
 
     <div>
-      <p>${meal.id}</p>
+    
       <Breadcrum meal={meal}/>
-      {/* <ProductDisplay meal={meal}/> */}
+       <ProductDisplay meal={meal}/> 
 
     </div>
   )
