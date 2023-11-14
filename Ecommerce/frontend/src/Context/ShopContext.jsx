@@ -25,8 +25,27 @@ const HomeContextprovider =(props) =>{
         }))
 }
     
-   
-const contextValue = {all_product,cartItems,addToCart,removeCart};
+  const getTotalCartAmount = ()=>{
+    let totalAmount =0;
+    for(const item in cartItems){
+        if(cartItems[item]>0){
+            let itemInfor =  all_product.find((product)=>product.id===Number(item))
+            totalAmount +=itemInfor.new_price * cartItems[item];
+        }
+        
+    }
+    return totalAmount;
+  }
+  const getTotalCartItems =()=>{
+    let totalItem=0;
+    for(const item in cartItems){
+        if(cartItems[item]>0){
+            totalItem+=cartItems[item]
+        }
+    }
+    return totalItem;
+  }
+const contextValue = {getTotalCartItems,getTotalCartAmount,all_product,cartItems,addToCart,removeCart};
     return(
         <ShopContext.Provider value={contextValue} >
          {props.children}
